@@ -6,8 +6,8 @@ export default function Home() {
     <main className="lg:h-[100vh]">
       <div className="flex flex-col lg:flex-row bg-[#2b2929] dark:bg-slate-800">
         <div className="p-10 flex flex-col bg-[#2b2929] dark:bg-slate-800 space-y-5">
-          <h1 className="text-5xl font-bold text-white ">
-            Welcome to <span className="text-blue-600">UP</span>THINGS. <br />
+          <h1 className="md:text-5xl text-2xl font-bold text-white ">
+            Welcome to <span className="text-blue-600">UP</span>THINGS <br />
             <br />
             Store anything for you and for everyone. Your ultimate storage
             solution.
@@ -17,7 +17,7 @@ export default function Home() {
             Store anything you need, from personal belongings to shared
             items,all in one convenient place. Our platform is designed for
             everyone, making storage accessible and hassle-free for all. Say
-            goodbye to clutter and hello to organization with UpThings.
+            goodbye to clutter and hello to organization with UPTHINGS.
           </p>
 
           <Link
