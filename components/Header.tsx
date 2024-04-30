@@ -7,13 +7,13 @@ import { ThemeToggle } from "./ThemeToggler";
 const Header = () => {
   return (
     <header className="flex item-center justify-between p-4 shadow-sm  dark:shadow-black sticky top-0 dark:bg-[#020817] bg-white">
-      <Link className="space-x-2 ml-5 flex items-center" href={"/"}>
+      <Link className="space-x-2 md:ml-5 ml-0 flex items-center" href={"/"}>
         <h1 className="font font-bold text-xl">
           <span className="text-[#3A80EA]">UP</span>
           <span>THINGS</span>
         </h1>
       </Link>
-      <div className="flex items-center space-x-2 mr-5">
+      <div className="flex items-center space-x-2 md:mr-5 mr-0">
         <ThemeToggle />
         <UserButton afterSignOutUrl="/" />
         <SignedOut>
