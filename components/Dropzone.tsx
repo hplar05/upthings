@@ -1,9 +1,35 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { useUser } from "@clerk/nextjs";
+import { useState } from "react";
 import DropzoneComponent from "react-dropzone";
 
 const Dropzone = () => {
+  const [loading, setLoading] = useState(false);
+  const { isLoaded, isSignedIn, user } = useUser();
+  const onDrop = (acceptedFiles: File[]) => {
+    acceptedFiles.forEach((file) => {
+      const reader = new FileReader();
+
+      reader.onabort = () => console.log("file reading was aborted");
+      reader.onerror = () => console.log("file reading has failed");
+      reader.onload = async () => {
+        await uploadPost(file);
+      };
+      reader.readAsArrayBuffer(file);
+    });
+  };
+
+  const uploadPost = async (selectedFile: File) => {
+    if (loading) return;
+    if (!user) return;
+
+    setLoading(true);
+
+    setLoading(false);
+  };
+
   const maxSize = 20971520;
 
   return (
