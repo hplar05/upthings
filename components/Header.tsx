@@ -17,7 +17,7 @@ const Header = () => {
         <ThemeToggle />
         <UserButton afterSignOutUrl="/" />
         <SignedOut>
-          <SignInButton mode="modal" />
+          <Link href={"/dashboard"}>Sign In</Link>
         </SignedOut>
       </div>
     </header>
